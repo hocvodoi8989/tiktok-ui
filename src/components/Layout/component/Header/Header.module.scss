@@ -11,4 +11,61 @@
     width: 100%;
     padding-right: 24px;
     padding-left: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+}
+
+.search {
+    width: 500px;
+    height: 46px;
+    background-color: rgba(22, 24, 35, 0.06);
+    display: flex;
+    padding-left: 16px;
+    border-radius: 92px;
+    overflow: hidden;
+
+    input {
+        flex: 1;
+        color: #161823;
+        font-size: 1.6rem;
+        background-color: transparent;
+        height: 100%;
+    }
+}
+
+.clear {
+}
+
+.loading {
+}
+
+.search-btn {
+    width: 52px;
+    height: 100%;
+}
+
+.action {
+}
+
+.plus {
+}
+
+.upload {
+}
+
+.telegram {
+}
+
+.inbox {
+}
+
+.user {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
 }
