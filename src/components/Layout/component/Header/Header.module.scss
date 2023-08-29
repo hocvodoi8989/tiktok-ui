@@ -19,14 +19,21 @@
 .logo {
 }
 
-.search {
+.search,
+.search-result {
     width: 500px;
+}
+
+.search {
     height: 46px;
+    position: relative;
     background-color: rgba(22, 24, 35, 0.06);
     display: flex;
+    align-items: center;
     padding-left: 16px;
     border-radius: 92px;
     overflow: hidden;
+    border: 1.5px solid transparent;
 
     input {
         flex: 1;
@@ -34,18 +41,55 @@
         font-size: 1.6rem;
         background-color: transparent;
         height: 100%;
+        caret-color: var(--primary);
+    }
+
+    input:hover ~ .search-btn {
+        color: rgba(22, 24, 35, 1);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 28px;
+        top: 9px;
+        right: 52px;
+        background-color: rgba(22, 24, 35, 0.12);
+    }
+
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+
+        .search-btn {
+            background-color: rgba(22, 24, 35, 0.05);
+        }
     }
 }
 
-.clear {
-}
-
+.clear,
 .loading {
+    position: absolute;
+    transform: translateY(-50%);
+    font-size: 1.6rem;
+    color: rgba(22, 24, 35, 0.34);
+    top: 50%;
+    right: 68px;
 }
 
 .search-btn {
     width: 52px;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: rgba(22, 24, 35, 0.34);
+
+    &:hover {
+        color: rgba(22, 24, 35, 1);
+        cursor: pointer;
+    }
 }
 
 .action {
