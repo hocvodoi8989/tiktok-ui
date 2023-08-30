@@ -16,7 +16,7 @@ function Accountitem() {
             <div className={cx('info')}>
                 <h4 className={cx('name')}>
                     <span>Nguyen Van A</span>
-                    <FontAwesomeIcon icon={faCheckCircle} />
+                    <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />
                 </h4>
                 <span className={cx('user-name')}>nguyenvana</span>
             </div>

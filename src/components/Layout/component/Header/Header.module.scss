@@ -17,15 +17,18 @@
 }
 
 .logo {
+    width: 118px;
+    height: 42px;
 }
 
 .search,
 .search-result {
-    width: 500px;
+    width: 516px;
 }
 
 .search {
     height: 46px;
+    min-width: 200px;
     position: relative;
     background-color: rgba(22, 24, 35, 0.06);
     display: flex;
@@ -67,6 +70,15 @@
     }
 }
 
+.search-lable {
+    height: 30px;
+    padding: 5px 12px;
+    font-size: 1.4rem;
+    line-height: 18px;
+    font-weight: 600;
+    color: rgba(22, 24, 35, 0.5);
+}
+
 .clear,
 .loading {
     position: absolute;
@@ -93,18 +105,81 @@
 }
 
 .action {
+    display: flex;
+    align-items: center;
 }
 
-.plus {
+// .upload {
+//     width: 116px;
+//     height: 36px;
+//     background-color: var(--white);
+//     border: 1px solid rgba(22, 24, 35, 0.12);
+//     border-radius: 2px;
+//     padding: 0 16px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     cursor: pointer;
+// }
+
+// .plus {
+//     font-size: 20px;
+//     margin-right: 8px;
+// }
+
+// .upload-title {
+//     font-size: 1.6rem;
+//     line-height: 24px;
+//     font-weight: 500;
+//     color: rgba(22, 24, 35, 1);
+// }
+
+.message-title {
+    background-color: rgba(84, 84, 84, 0.92);
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    border-radius: 8px;
 }
 
-.upload {
-}
-
-.telegram {
+.message {
+    margin-left: 16px;
+    cursor: pointer;
+    padding: 3px 3px 0;
+    font-size: 14px;
+    height: 24px;
+    color: rgba(22, 24, 35, 1);
 }
 
 .inbox {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    margin-left: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .inbox-icon {
+        font-size: 2rem;
+        color: rgba(22, 24, 35, 1);
+    }
+
+    .noti {
+        position: absolute;
+        top: -8px;
+        padding: 1px 6px;
+        background-color: red;
+        border-radius: 50%;
+        right: -4px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        line-height: 18px;
+    }
 }
 
 .user {
@@ -112,4 +187,5 @@
     height: 32px;
     border-radius: 50%;
     cursor: pointer;
+    margin-left: 24px;
 }

@@ -1,10 +1,11 @@
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark, faMagnifyingGlass, faPlus } from '@fortawesome/free-solid-svg-icons';
-import { faTelegram } from '@fortawesome/free-brands-svg-icons';
-import { faMessage } from '@fortawesome/free-regular-svg-icons';
+import { faMessage, faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
+import Button from '../Button/Button';
 import { Wrapper as PopperWrapper } from '../Popper';
 import Tippy from '@tippyjs/react/headless';
 import styles from './Header.module.scss';
@@ -17,7 +18,7 @@ function Header() {
     const [searchResult, setSearchResult] = useState([]);
 
     useEffect(() => {
-        setTimeout(() => [setSearchResult([1, 2, 3])], 0);
+        setTimeout(() => [setSearchResult([1])]);
     }, []);
 
     return (
@@ -54,12 +55,29 @@ function Header() {
                     </div>
                 </Tippy>
                 <div className={cx('action')}>
-                    <button>
+                    <Button>
                         <FontAwesomeIcon className={cx('plus')} icon={faPlus} />
-                        <span className={cx('upload')}>Upload</span>
-                    </button>
-                    <FontAwesomeIcon className={cx('telegram')} icon={faTelegram} />
-                    <FontAwesomeIcon className={cx('inbox')} icon={faMessage} />
+                        Upload
+                    </Button>
+                    {/* <button className={cx('upload')}>
+                        <FontAwesomeIcon className={cx('plus')} icon={faPlus} />
+                        <span className={cx('upload-title')}>Upload</span>
+                    </button> */}
+                    <Tippy
+                        arrow
+                        render={(attrs) => (
+                            <div className={cx('message-title')} tabIndex="-1" {...attrs}>
+                                Messages
+                            </div>
+                        )}
+                    >
+                        <FontAwesomeIcon className={cx('message')} icon={faPaperPlane} />
+                    </Tippy>
+                    <div className={cx('inbox')}>
+                        <FontAwesomeIcon className={cx('inbox-icon')} icon={faMessage} />
+                        <div className={cx('noti')}>9</div>
+                    </div>
+
                     <img className={cx('user')} src={images.user} alt="user" />
                 </div>
             </div>

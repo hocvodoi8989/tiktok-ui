@@ -1,0 +1,12 @@
+.wraper {
+    width: 116px;
+    height: 36px;
+    background-color: var(--white);
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 2px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
